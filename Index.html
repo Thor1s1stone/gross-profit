@@ -213,7 +213,7 @@
       if (!Number.isFinite(sales) || !Number.isFinite(cost)) return;
 
       const grossProfit = sales - cost;
-      const percentage = sales === 0 ? NaN : (grossProfit / sales) * 100;
+      const percentage = sales === 0 ? NaN : (grossProfit / cost) * 100;
 
       gpEl.textContent = grossProfit.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
       gppEl.textContent = Number.isNaN(percentage)
@@ -247,6 +247,7 @@
   </script>
 </body>
 </html>
+
 
 
 
